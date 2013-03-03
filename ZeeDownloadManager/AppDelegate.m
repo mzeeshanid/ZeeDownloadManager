@@ -2,26 +2,30 @@
 //  AppDelegate.m
 //  ZeeDownloadManager
 //
-//  Created by Muhammad Zeeshan on 3/3/13.
+//  Created by Muhammad Zeeshan on 2/3/13.
 //  Copyright (c) 2013 Muhammad Zeeshan. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
 
 @implementation AppDelegate
+@synthesize window;
+@synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
         self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    } else {
+    else
         self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-    }
-    self.window.rootViewController = self.viewController;
+    
+    UINavigationController *naviObj = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Manager" style:UIBarButtonItemStyleBordered target:self.viewController action:@selector(showManagerButtonTapped:)];
+    [self.viewController.navigationItem setRightBarButtonItem:rightBarButton];
+    [self.window setRootViewController:naviObj];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -34,7 +38,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
