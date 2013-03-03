@@ -9,4 +9,4 @@ ZeeDownloadManager
   <p>5) User can also pause the download.</p></p>
   <p>6)User can retry any download if any error occurred during download.</p>
 
-<img src="https://github.com/mzeeshanid/ZeeDownloadManager/blob/master/Screenshot.png" alt="Screenshot">
+<img src="Screenshot.png" alt="Screenshot">
