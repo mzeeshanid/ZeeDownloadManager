@@ -14,20 +14,20 @@ ZeeDownloadManager
 
 <b>USAGE:</b>
 
-You need ASIHTTPRequest classes get it https://github.com/pokeb/asi-http-request and setup your project Copy the ZeeDownloadsViewController.h ,m and xib file in your xcodeproject.
-<b><u>STEPS</u></b>
+<p>You need ASIHTTPRequest classes get it https://github.com/pokeb/asi-http-request and setup your project Copy the ZeeDownloadsViewController.h ,m and xib file in your xcodeproject.</p>
+<p><b><u>STEPS</u></b></p>
   <p>1)Initialize ZeeDownloadManagerViewController. (Must retain its object. Otherwise app will crash)</p>
   <p>2)Set delegate</p>
   <p>3)Initiaze array with urls</p>
   <p>4)"resumeAllInterruptedDownloads" call this instance method to resume interrupted downloads</p>
   <p>5)Setup your tableview and list down the URLs</p>
   <p>6)Use the following delegate methods.</p>
-    -(void)downloadRequestStarted:(ASIHTTPRequest *)request;
-    -(void)downloadRequestReceivedResponseHeaders:(ASIHTTPRequest *)request responseHeaders:(NSDictionary *)responseHeaders;
-    -(void)downloadRequestFinished:(ASIHTTPRequest *)request;
-    -(void)downloadRequestFailed:(ASIHTTPRequest *)request;
-    -(void)downloadRequestPaused:(ASIHTTPRequest *)request;
-    -(void)downloadRequestCanceled:(ASIHTTPRequest *)request;
+    <p>-(void)downloadRequestStarted:(ASIHTTPRequest *)request;</p>
+    <p>-(void)downloadRequestReceivedResponseHeaders:(ASIHTTPRequest *)request responseHeaders:(NSDictionary *)responseHeaders;</p>
+    <p>-(void)downloadRequestFinished:(ASIHTTPRequest *)request;</p>
+    <p>-(void)downloadRequestFailed:(ASIHTTPRequest *)request;</p>
+    <p>-(void)downloadRequestPaused:(ASIHTTPRequest *)request;</p>
+    <p>-(void)downloadRequestCanceled:(ASIHTTPRequest *)request;</p>
     
   Thats it
 
